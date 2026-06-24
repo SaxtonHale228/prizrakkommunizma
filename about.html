@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Призрак Коммунизма — Обо мне</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #111;
+            color: #ddd;
+            line-height: 1.7;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+        a { color: #cc0000; text-decoration: none; transition: color 0.2s; }
+        a:hover { color: #ff3333; text-decoration: underline; }
+        .container { max-width: 1100px; margin: 0 auto; padding: 0 20px; }
+        .section-title {
+            font-size: 2.2rem;
+            text-align: center;
+            margin-bottom: 2rem;
+            color: #fff;
+            border-bottom: 3px solid #cc0000;
+            padding-bottom: 0.5rem;
+            display: inline-block;
+        }
+
+        header {
+            background-color: #1a1a1a;
+            padding: 1.2rem 0;
+            border-bottom: 2px solid #cc0000;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+        .logo { font-size: 1.8rem; font-weight: bold; color: #fff; letter-spacing: 1px; }
+        .logo span { color: #cc0000; }
+        .nav-links {
+            list-style: none;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 2rem;
+        }
+        .nav-links a {
+            color: #aaa;
+            font-size: 1.1rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            padding: 0.5rem 0;
+            border-bottom: 2px solid transparent;
+            transition: all 0.2s ease;
+        }
+        .nav-links a:hover {
+            color: #fff;
+            border-bottom-color: #cc0000;
+            text-decoration: none;
+        }
+        .nav-links a.active {
+            color: #fff;
+            border-bottom-color: #cc0000;
+        }
+
+        .page-content {
+            padding: 4rem 0;
+            flex: 1;
+            background: #181818;
+        }
+        .page-content h2 {
+            color: #fff;
+            font-size: 2.5rem;
+            margin-bottom: 1.5rem;
+            border-left: 4px solid #cc0000;
+            padding-left: 1rem;
+        }
+        .page-content h3 {
+            color: #cc0000;
+            margin: 1.8rem 0 0.8rem;
+            font-size: 1.5rem;
+        }
+        .page-content p { margin-bottom: 1.2rem; }
+        .page-content ul {
+            list-style-position: inside;
+            padding-left: 0.5rem;
+            margin-bottom: 1rem;
+        }
+        .page-content ul li { margin-bottom: 0.5rem; }
+        .page-content .avatar {
+            float: left;
+            margin: 0 2rem 1.5rem 0;
+            width: 180px;
+            border-radius: 50%;
+            border: 3px solid #cc0000;
+        }
+        /* Если картинки нет — показывается заглушка */
+        .avatar-placeholder {
+            float: left;
+            margin: 0 2rem 1.5rem 0;
+            width: 180px;
+            height: 180px;
+            background: #2a2a2a;
+            border-radius: 50%;
+            border: 3px solid #cc0000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #555;
+            font-size: 4rem;
+        }
+
+        footer {
+            background-color: #0d0d0d;
+            padding: 1.5rem 0;
+            text-align: center;
+            color: #555;
+            font-size: 0.9rem;
+            border-top: 1px solid #222;
+            margin-top: auto;
+        }
+        footer a { color: #777; }
+        footer a:hover { color: #cc0000; }
+
+        @media (max-width: 768px) {
+            .page-content .avatar, .avatar-placeholder {
+                float: none;
+                margin: 0 auto 1.5rem;
+                display: block;
+            }
+            .nav-links { gap: 1rem; }
+            .nav-links a { font-size: 0.9rem; }
+            .page-content h2 { font-size: 2rem; }
+        }
+        @media (max-width: 480px) {
+            .page-content .avatar, .avatar-placeholder { width: 120px; height: 120px; }
+            .page-content h2 { font-size: 1.6rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <nav>
+                <div class="logo">☭ <span>Призрак</span> Коммунизма</div>
+                <ul class="nav-links">
+                    <li><a href="index.html">Главная</a></li>
+                    <li><a href="about.html" class="active">Обо мне</a></li>
+                    <li><a href="theory.html">Моя теория</a></li>
+                    <li><a href="social.html">Мои соцсети</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="page-content">
+        <div class="container">
+            <h2>👤 Обо мне</h2>
+
+            <!-- Здесь можно вставить свою фотографию: замени src="images/avatar.jpg" -->
+            <img src="images/avatar.jpg" alt="Ухватов" class="avatar" onerror="this.style.display='none'; document.getElementById('avatarFallback').style.display='flex';">
+            <div id="avatarFallback" class="avatar-placeholder" style="display:none;">☭</div>
+
+            <p><strong>Я — Г. Е. Ухватов</strong>, автор проекта «Призрак Коммунизма». Моя позиция — <strong>антиавторитарный советский социализм</strong>. Я критикую все авторитарные и ревизионистские ответвления марксизма: сталинизм, троцкизм, маоизм, ходжаизм, а также любые формы «левого» национализма и государственного капитализма под красным флагом.</p>
+
+            <p>Мой ориентир — <strong>ранний Ленин (1917–1921)</strong>, Роза Люксембург, Рабочая оппозиция и идеи Кронштадтского восстания. Я не идеализирую советский опыт, но беру из него лучшее — и отбрасываю бюрократическое перерождение.</p>
+
+            <h3>🔹 Ключевые принципы</h3>
+            <ul>
+                <li><strong>Интернационализм</strong> — пролетарии всех стран едины в борьбе против капитала, а не против «чужих» наций.</li>
+                <li><strong>Власть Советов</strong> — реальное самоуправление трудящихся, а не диктатура бюрократии.</li>
+                <li><strong>Социалистическая демократия</strong> — выборность, отзыв депутатов и свобода фракций.</li>
+                <li><strong>Антиимпериализм</strong> — против всех форм угнетения, включая государственный капитализм под красным флагом.</li>
+                <li><strong>Критика всех авторитарных уклонов</strong> — сталинизм, троцкизм, маоизм, ходжаизм — все они отошли от марксизма.</li>
+            </ul>
+
+            <h3>🔹 Что я делаю?</h3>
+            <p>Я веду аналитический канал, пишу статьи, записываю видео, разбираю историю и современность с классовых позиций. Моя цель — не «реабилитировать» СССР, а построить новую теорию социализма, свободную от бюрократии и культа. Социализм, который действительно принадлежит трудящимся.</p>
+
+            <p><a href="theory.html">➡️ Перейти к изложению моей теории</a></p>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>☭ <a href="index.html">Призрак Коммунизма</a> © 2026. Призрак бродит по Европе.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
