@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Призрак Коммунизма — Моя теория</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #111;
+            color: #ddd;
+            line-height: 1.7;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+        a { color: #cc0000; text-decoration: none; transition: color 0.2s; }
+        a:hover { color: #ff3333; text-decoration: underline; }
+        .container { max-width: 1100px; margin: 0 auto; padding: 0 20px; }
+        .section-title {
+            font-size: 2.2rem;
+            text-align: center;
+            margin-bottom: 2rem;
+            color: #fff;
+            border-bottom: 3px solid #cc0000;
+            padding-bottom: 0.5rem;
+            display: inline-block;
+        }
+
+        header {
+            background-color: #1a1a1a;
+            padding: 1.2rem 0;
+            border-bottom: 2px solid #cc0000;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+        .logo { font-size: 1.8rem; font-weight: bold; color: #fff; letter-spacing: 1px; }
+        .logo span { color: #cc0000; }
+        .nav-links {
+            list-style: none;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 2rem;
+        }
+        .nav-links a {
+            color: #aaa;
+            font-size: 1.1rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            padding: 0.5rem 0;
+            border-bottom: 2px solid transparent;
+            transition: all 0.2s ease;
+        }
+        .nav-links a:hover {
+            color: #fff;
+            border-bottom-color: #cc0000;
+            text-decoration: none;
+        }
+        .nav-links a.active {
+            color: #fff;
+            border-bottom-color: #cc0000;
+        }
+
+        .page-content {
+            padding: 4rem 0;
+            flex: 1;
+            background: #1f1f1f;
+        }
+        .page-content h2 {
+            color: #fff;
+            font-size: 2.5rem;
+            margin-bottom: 1.5rem;
+            border-left: 4px solid #cc0000;
+            padding-left: 1rem;
+        }
+        .page-content h3 {
+            color: #cc0000;
+            margin: 2rem 0 0.8rem;
+            font-size: 1.7rem;
+        }
+        .page-content h4 {
+            color: #ddd;
+            margin: 1.5rem 0 0.5rem;
+            font-size: 1.3rem;
+        }
+        .page-content p { margin-bottom: 1.2rem; }
+        .page-content ul {
+            list-style-position: inside;
+            padding-left: 0.5rem;
+            margin-bottom: 1.5rem;
+        }
+        .page-content ul li { margin-bottom: 0.6rem; }
+        .theory-block {
+            background: #2a2a2a;
+            padding: 2rem 2.5rem;
+            border-radius: 12px;
+            border-left: 6px solid #cc0000;
+            margin-bottom: 2.5rem;
+        }
+        .theory-block:last-child { margin-bottom: 0; }
+
+        footer {
+            background-color: #0d0d0d;
+            padding: 1.5rem 0;
+            text-align: center;
+            color: #555;
+            font-size: 0.9rem;
+            border-top: 1px solid #222;
+            margin-top: auto;
+        }
+        footer a { color: #777; }
+        footer a:hover { color: #cc0000; }
+
+        @media (max-width: 768px) {
+            .nav-links { gap: 1rem; }
+            .nav-links a { font-size: 0.9rem; }
+            .page-content h2 { font-size: 2rem; }
+            .theory-block { padding: 1.5rem; }
+        }
+        @media (max-width: 480px) {
+            .page-content h2 { font-size: 1.6rem; }
+            .page-content h3 { font-size: 1.3rem; }
+            .theory-block { padding: 1rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <nav>
+                <div class="logo">☭ <span>Призрак</span> Коммунизма</div>
+                <ul class="nav-links">
+                    <li><a href="index.html">Главная</a></li>
+                    <li><a href="about.html">Обо мне</a></li>
+                    <li><a href="theory.html" class="active">Моя теория</a></li>
+                    <li><a href="social.html">Мои соцсети</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="page-content">
+        <div class="container">
+            <h2>📖 Моя теория</h2>
+            <p>Здесь — развёрнутое изложение моей позиции. Две опоры: <strong>Марксистская демократия</strong> и <strong>Антиавторитарный советский социализм</strong>.</p>
+
+            <div class="theory-block">
+                <h3>Марксистская демократия</h3>
+                <p>Это не «либеральная демократия» (диктатура буржуазии) и не «диктатура партии» (бюрократическое перерождение). Это власть, построенная на <strong>Советах трудящихся</strong> — органах прямого самоуправления, где:</p>
+                <ul>
+                    <li><strong>Выборность снизу доверху.</strong> Все делегаты избираются на собраниях трудовых коллективов (фабрик, заводов, школ, больниц) и могут быть отозваны в любой момент.</li>
+                    <li><strong>Императивный мандат.</strong> Депутат голосует не по личному усмотрению, а по наказу избирателей. Нарушил наказ — отзывается автоматически.</li>
+                    <li><strong>Свобода фракций.</strong> Внутри Советов допустимы дискуссии, критика большинства меньшинством и право на особое мнение. Запрет фракций (как на X съезде РКП(б) в 1921 году) — смертный приговор советской демократии.</li>
+                    <li><strong>Ликвидация привилегий.</strong> Никаких «элит» и «номенклатуры». Депутаты не получают особых прав, машин, дач или спецобслуживания.</li>
+                    <li><strong>Демократия для трудящихся.</strong> Власть принадлежит рабочему классу, а не капиталу. Собственность на средства производства — общественная.</li>
+                    <li><strong>Народный контроль.</strong> Выборные контролёры от рабочих коллективов проверяют работу госучреждений, судов и милиции.</li>
+                </ul>
+                <p>Марксистская демократия — это <strong>реальное участие трудящихся в управлении</strong> всеми сферами жизни — от цеха до федерации.</p>
+            </div>
+
+            <div class="theory-block">
+                <h3>Антиавторитарный советский социализм</h3>
+                <p>Это синтез лучших идей раннего советского опыта (1917–1921) и критики его бюрократического перерождения. Я отвергаю все формы авторитаризма:</p>
+                <ul>
+                    <li><strong>Культ личности.</strong> Никаких «вождей» и «отцов народов». Только коллективное руководство.</li>
+                    <li><strong>Запрет фракций.</strong> Без свободы критики партия превращается в бюрократическую корпорацию.</li>
+                    <li><strong>Государственный капитализм.</strong> Когда рабочие остаются наёмными — это не социализм, а новая форма эксплуатации.</li>
+                    <li><strong>Подавление Советов.</strong> Реальная власть должна принадлежать не парткомитетам, а Советам.</li>
+                    <li><strong>Великодержавный шовинизм.</strong> Мы против имперского национализма под любым флагом. Интернационализм — не лозунг, а принцип.</li>
+                    <li><strong>Репрессии как метод.</strong> ГУЛАГ и «враги народа» — не социализм, а его карикатура.</li>
+                </ul>
+                <p>Мы строим социализм <strong>снизу</strong>, без диктатуры аппарата над классом, без культа и без карательной машины. Социализм, который не боится демократии.</p>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>☭ <a href="index.html">Призрак Коммунизма</a> © 2026. Призрак бродит по Европе.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
