@@ -1,0 +1,271 @@
+/* ===== Общие стили ===== */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #111;
+    color: #ddd;
+    line-height: 1.8;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+a { color: #cc0000; text-decoration: none; transition: color 0.2s; }
+a:hover { color: #ff3333; text-decoration: underline; }
+.container { max-width: 1100px; margin: 0 auto; padding: 0 20px; }
+.section-title {
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 2.5rem;
+    color: #fff;
+    border-bottom: 3px solid #cc0000;
+    padding-bottom: 0.5rem;
+    display: inline-block;
+}
+.text-center { text-align: center; }
+.mt-2 { margin-top: 2rem; }
+
+/* ===== Шапка ===== */
+header {
+    background-color: #1a1a1a;
+    padding: 1.2rem 0;
+    border-bottom: 2px solid #cc0000;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.logo { font-size: 1.8rem; font-weight: bold; color: #fff; letter-spacing: 1px; }
+.logo span { color: #cc0000; }
+.nav-links {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+.nav-links a {
+    color: #aaa;
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    padding: 0.5rem 0;
+    border-bottom: 2px solid transparent;
+    transition: all 0.2s ease;
+}
+.nav-links a:hover,
+.nav-links a.active {
+    color: #fff;
+    border-bottom-color: #cc0000;
+    text-decoration: none;
+}
+
+/* ===== Герой (главная) ===== */
+.hero {
+    padding: 4rem 0 3rem;
+    text-align: center;
+    background: linear-gradient(135deg, #1a1a1a 0%, #2a0a0a 100%);
+    border-bottom: 1px solid #333;
+    flex: 1;
+}
+.hero h1 { font-size: 4.5rem; color: #fff; margin-bottom: 0.5rem; }
+.hero h1 span { color: #cc0000; }
+.hero .subtitle {
+    font-size: 1.6rem;
+    color: #aaa;
+    font-style: italic;
+    margin-bottom: 1.5rem;
+}
+.hero .quote {
+    max-width: 750px;
+    margin: 0 auto 2rem;
+    padding: 1.8rem 2rem;
+    background: rgba(204, 0, 0, 0.08);
+    border-left: 4px solid #cc0000;
+    border-radius: 6px;
+    font-size: 1.1rem;
+    color: #ccc;
+    text-align: left;
+}
+.hero .quote cite {
+    display: block;
+    text-align: right;
+    margin-top: 0.5rem;
+    font-style: normal;
+    color: #888;
+    font-size: 0.9rem;
+}
+.btn {
+    display: inline-block;
+    background: #cc0000;
+    color: #fff;
+    padding: 0.9rem 2.5rem;
+    border-radius: 40px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    transition: background 0.2s ease, transform 0.2s ease;
+    margin: 0.5rem;
+}
+.btn:hover {
+    background: #aa0000;
+    transform: scale(1.03);
+    text-decoration: none; color: #fff;
+}
+.btn-outline {
+    background: transparent;
+    border: 2px solid #cc0000;
+    color: #cc0000;
+}
+.btn-outline:hover { background: #cc0000; color: #fff; }
+
+.hero .nav-cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+    margin-top: 3rem;
+}
+.hero .nav-card {
+    background: #222;
+    padding: 2rem 2rem;
+    border-radius: 12px;
+    border: 1px solid #333;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    min-width: 200px;
+    flex: 1 1 200px;
+}
+.hero .nav-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 6px 20px rgba(0,0,0,0.6);
+    border-color: #cc0000;
+}
+.hero .nav-card h3 { color: #fff; margin-bottom: 0.5rem; }
+.hero .nav-card p { color: #aaa; font-size: 0.95rem; }
+
+/* ===== Страницы контента ===== */
+.page-content {
+    padding: 4rem 0;
+    flex: 1;
+    background: #181818;
+}
+.page-content h2 {
+    color: #fff;
+    font-size: 2.8rem;
+    margin-bottom: 2rem;
+    border-left: 4px solid #cc0000;
+    padding-left: 1.2rem;
+}
+.page-content h3 {
+    color: #cc0000;
+    margin: 2rem 0 1rem;
+    font-size: 1.8rem;
+}
+.page-content h4 {
+    color: #ddd;
+    margin: 1.5rem 0 0.8rem;
+    font-size: 1.3rem;
+}
+.page-content p { margin-bottom: 1.2rem; }
+.page-content ul {
+    list-style-position: inside;
+    padding-left: 0.5rem;
+    margin-bottom: 1.5rem;
+}
+.page-content ul li { margin-bottom: 0.6rem; }
+
+/* Карточки теории */
+.theory-block {
+    background: #2a2a2a;
+    padding: 2rem 2.5rem;
+    border-radius: 12px;
+    border-left: 6px solid #cc0000;
+    margin-bottom: 2.5rem;
+}
+.theory-block h3 { margin-top: 0; }
+
+/* ===== Новости ===== */
+.news-item {
+    background: #222;
+    padding: 1.5rem;
+    border-radius: 8px;
+    border-left: 4px solid #cc0000;
+    margin-bottom: 1.5rem;
+}
+.news-item .date {
+    color: #777;
+    font-size: 0.85rem;
+    margin-bottom: 0.3rem;
+}
+.news-item .text { color: #ccc; }
+
+/* ===== Соцсети ===== */
+.social-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+.social-card {
+    background: #2a2a2a;
+    padding: 2rem 1.5rem;
+    border-radius: 12px;
+    border: 1px solid #333;
+    text-align: center;
+    transition: transform 0.2s, box-shadow 0.2s, border-color 0.2s;
+}
+.social-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 20px rgba(0,0,0,0.6);
+    border-color: #cc0000;
+}
+.social-card .icon { font-size: 3rem; margin-bottom: 0.5rem; }
+.social-card h3 { color: #fff; font-size: 1.3rem; }
+.social-card p { color: #aaa; font-size: 0.9rem; margin: 0.5rem 0; }
+.social-card .btn-small {
+    display: inline-block;
+    background: #cc0000;
+    color: #fff;
+    padding: 0.4rem 1.5rem;
+    border-radius: 30px;
+    font-size: 0.9rem;
+    transition: background 0.2s;
+}
+.social-card .btn-small:hover {
+    background: #aa0000;
+    text-decoration: none;
+}
+
+/* ===== Подвал ===== */
+footer {
+    background-color: #0d0d0d;
+    padding: 1.5rem 0;
+    text-align: center;
+    color: #555;
+    font-size: 0.9rem;
+    border-top: 1px solid #222;
+    margin-top: auto;
+}
+footer a { color: #777; }
+footer a:hover { color: #cc0000; }
+
+/* ===== Адаптив ===== */
+@media (max-width: 768px) {
+    .hero h1 { font-size: 2.8rem; }
+    .hero .subtitle { font-size: 1.2rem; }
+    .nav-links { gap: 0.8rem; }
+    .nav-links a { font-size: 0.85rem; }
+    .page-content h2 { font-size: 2rem; }
+    .theory-block { padding: 1.5rem; }
+    .hero .nav-card { flex: 1 1 100%; }
+}
+@media (max-width: 480px) {
+    .hero h1 { font-size: 2.2rem; }
+    .hero .quote { font-size: 1rem; padding: 1rem; }
+    .page-content h2 { font-size: 1.6rem; }
+    .theory-block { padding: 1rem; }
+}
