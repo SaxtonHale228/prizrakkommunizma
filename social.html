@@ -3,98 +3,77 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Призрак Коммунизма — Мои соцсети</title>
-    <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background-color: #111;
-            color: #ddd;
-            line-height: 1.7;
-            min-height: 100vh;
-            display: flex;
-            flex-direction: column;
-        }
-        a { color: #cc0000; text-decoration: none; transition: color 0.2s; }
-        a:hover { color: #ff3333; text-decoration: underline; }
-        .container { max-width: 1100px; margin: 0 auto; padding: 0 20px; }
-        .section-title {
-            font-size: 2.2rem;
-            text-align: center;
-            margin-bottom: 2rem;
-            color: #fff;
-            border-bottom: 3px solid #cc0000;
-            padding-bottom: 0.5rem;
-            display: inline-block;
-        }
+    <title>Призрак Коммунизма — Контакты</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
 
-        header {
-            background-color: #1a1a1a;
-            padding: 1.2rem 0;
-            border-bottom: 2px solid #cc0000;
-            position: sticky;
-            top: 0;
-            z-index: 100;
-        }
-        nav {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            flex-wrap: wrap;
-        }
-        .logo { font-size: 1.8rem; font-weight: bold; color: #fff; letter-spacing: 1px; }
-        .logo span { color: #cc0000; }
-        .nav-links {
-            list-style: none;
-            display: flex;
-            flex-wrap: wrap;
-            gap: 2rem;
-        }
-        .nav-links a {
-            color: #aaa;
-            font-size: 1.1rem;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-            padding: 0.5rem 0;
-            border-bottom: 2px solid transparent;
-            transition: all 0.2s ease;
-        }
-        .nav-links a:hover {
-            color: #fff;
-            border-bottom-color: #cc0000;
-            text-decoration: none;
-        }
-        .nav-links a.active {
-            color: #fff;
-            border-bottom-color: #cc0000;
-        }
+<header>
+    <div class="container">
+        <nav>
+            <div class="logo">☭ <span>Призрак</span> Коммунизма</div>
+            <ul class="nav-links">
+                <li><a href="index.html">Главная</a></li>
+                <li><a href="about.html">Обо мне</a></li>
+                <li><a href="theory.html">Теория</a></li>
+                <li><a href="news.html">Новости</a></li>
+                <li><a href="social.html" class="active">Контакты</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
 
-        .page-content {
-            padding: 4rem 0;
-            flex: 1;
-            background: #181818;
-        }
-        .page-content h2 {
-            color: #fff;
-            font-size: 2.5rem;
-            margin-bottom: 1.5rem;
-            border-left: 4px solid #cc0000;
-            padding-left: 1rem;
-        }
-        .page-content p { margin-bottom: 1.2rem; }
-        .social-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-            gap: 2rem;
-            margin-top: 2.5rem;
-        }
-        .social-card {
-            background: #2a2a2a;
-            padding: 2rem 1.5rem;
-            border-radius: 12px;
-            border: 1px solid #333;
-            text-align: center;
-            transition: transform 0.2s, box-shadow 0.2s, border-color 0.2s;
-        }
-        .social-card:hover {
-            transform: translateY(-5px);
+<main class="page-content">
+    <div class="container">
+        <h2>📱 Мои соцсети</h2>
+        <p>Подписывайся, читай, распространяй. Борьба продолжается.</p>
+
+        <div class="social-grid">
+            <div class="social-card">
+                <div class="icon">📱</div>
+                <h3>Telegram (основной)</h3>
+                <p>Канал «Призрак Коммунизма» — аналитика, статьи, разборы.</p>
+                <a href="https://t.me/PrisrakKommunisma" target="_blank" class="btn-small">Перейти →</a>
+            </div>
+
+            <div class="social-card">
+                <div class="icon">📰</div>
+                <h3>Telegram (новости)</h3>
+                <p>Канал «Новости пролетариата» — события, факты, сводки.</p>
+                <a href="https://t.me/PrisrakNews" target="_blank" class="btn-small">Перейти →</a>
+            </div>
+
+            <div class="social-card">
+                <div class="icon">▶️</div>
+                <h3>YouTube</h3>
+                <p>Видео-версии статей, разборы, лекции.</p>
+                <a href="https://www.youtube.com/@%D0%9F%D1%80%D0%B8%D0%B7%D1%80%D0%B0%D0%BA%D0%9A%D0%BE%D0%BC%D0%BC%D1%83%D0%BD%D0%B8%D0%B7%D0%BC%D0%B01917" target="_blank" class="btn-small">Перейти →</a>
+            </div>
+
+            <div class="social-card">
+                <div class="icon">✍️</div>
+                <h3>Teletype</h3>
+                <p>Архив статей, полнотекстовые версии материалов.</p>
+                <a href="https://teletype.in/@prisrakkommunizma" target="_blank" class="btn-small">Перейти →</a>
+            </div>
+
+            <div class="social-card">
+                <div class="icon">🌐</div>
+                <h3>Этот сайт</h3>
+                <p>Призрак Коммунизма — главная страница проекта.</p>
+                <a href="index.html" class="btn-small">На главную →</a>
+            </div>
+        </div>
+
+        <p style="margin-top: 2rem; color: #888; font-size: 0.9rem;">Все каналы и страницы управляются лично мной. Если у вас есть вопросы или предложения — пишите в Telegram.</p>
+    </div>
+</main>
+
+<footer>
+    <div class="container">
+        <p>☭ <a href="index.html">Призрак Коммунизма</a> © 2026. Призрак бродит по Европе.</p>
+    </div>
+</footer>
+
+</body>
+</html>
