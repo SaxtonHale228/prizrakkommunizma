@@ -4,279 +4,70 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Призрак Коммунизма — Главная</title>
-    <style>
-        /* ===== Общие стили ===== */
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background-color: #111;
-            color: #ddd;
-            line-height: 1.7;
-            min-height: 100vh;
-            display: flex;
-            flex-direction: column;
-        }
-        a {
-            color: #cc0000;
-            text-decoration: none;
-            transition: color 0.2s ease;
-        }
-        a:hover {
-            color: #ff3333;
-            text-decoration: underline;
-        }
-        .container {
-            max-width: 1100px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-        .section-title {
-            font-size: 2.2rem;
-            text-align: center;
-            margin-bottom: 2rem;
-            color: #fff;
-            border-bottom: 3px solid #cc0000;
-            padding-bottom: 0.5rem;
-            display: inline-block;
-        }
-
-        /* ===== Шапка ===== */
-        header {
-            background-color: #1a1a1a;
-            padding: 1.2rem 0;
-            border-bottom: 2px solid #cc0000;
-            position: sticky;
-            top: 0;
-            z-index: 100;
-        }
-        nav {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            flex-wrap: wrap;
-        }
-        .logo {
-            font-size: 1.8rem;
-            font-weight: bold;
-            color: #fff;
-            letter-spacing: 1px;
-        }
-        .logo span { color: #cc0000; }
-        .nav-links {
-            list-style: none;
-            display: flex;
-            flex-wrap: wrap;
-            gap: 2rem;
-        }
-        .nav-links a {
-            color: #aaa;
-            font-size: 1.1rem;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-            padding: 0.5rem 0;
-            border-bottom: 2px solid transparent;
-            transition: all 0.2s ease;
-        }
-        .nav-links a:hover {
-            color: #fff;
-            border-bottom-color: #cc0000;
-            text-decoration: none;
-        }
-        .nav-links a.active {
-            color: #fff;
-            border-bottom-color: #cc0000;
-        }
-
-        /* ===== Герой (Главная) ===== */
-        .hero {
-            padding: 5rem 0 4rem;
-            text-align: center;
-            background: linear-gradient(135deg, #1a1a1a 0%, #2a0a0a 100%);
-            border-bottom: 1px solid #333;
-            flex: 1;
-        }
-        .hero h1 {
-            font-size: 4.5rem;
-            color: #fff;
-            margin-bottom: 1rem;
-        }
-        .hero h1 span { color: #cc0000; }
-        .hero .subtitle {
-            font-size: 1.6rem;
-            color: #aaa;
-            font-style: italic;
-            margin-bottom: 1.5rem;
-        }
-        .hero .description {
-            font-size: 1.2rem;
-            max-width: 750px;
-            margin: 0 auto 2.5rem;
-            color: #bbb;
-        }
-        .hero .quote {
-            max-width: 750px;
-            margin: 0 auto 2rem;
-            padding: 1.8rem 2rem;
-            background: rgba(204, 0, 0, 0.08);
-            border-left: 4px solid #cc0000;
-            border-radius: 6px;
-            font-size: 1.1rem;
-            color: #ccc;
-            text-align: left;
-        }
-        .hero .quote cite {
-            display: block;
-            text-align: right;
-            margin-top: 0.5rem;
-            font-style: normal;
-            color: #888;
-            font-size: 0.9rem;
-        }
-        .hero .btn {
-            display: inline-block;
-            background: #cc0000;
-            color: #fff;
-            padding: 0.9rem 2.5rem;
-            border-radius: 40px;
-            font-size: 1.1rem;
-            font-weight: bold;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-            transition: background 0.2s ease, transform 0.2s ease;
-            margin: 0.5rem;
-        }
-        .hero .btn:hover {
-            background: #aa0000;
-            transform: scale(1.03);
-            text-decoration: none;
-        }
-        .hero .btn-outline {
-            background: transparent;
-            border: 2px solid #cc0000;
-            color: #cc0000;
-        }
-        .hero .btn-outline:hover {
-            background: #cc0000;
-            color: #fff;
-        }
-        .hero .nav-cards {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 2rem;
-            justify-content: center;
-            margin-top: 3rem;
-        }
-        .hero .nav-card {
-            background: #222;
-            padding: 2rem 2.5rem;
-            border-radius: 12px;
-            border: 1px solid #333;
-            transition: transform 0.2s ease, box-shadow 0.2s ease;
-            min-width: 200px;
-        }
-        .hero .nav-card:hover {
-            transform: translateY(-6px);
-            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.6);
-            border-color: #cc0000;
-        }
-        .hero .nav-card h3 {
-            color: #fff;
-            margin-bottom: 0.5rem;
-        }
-        .hero .nav-card p {
-            color: #aaa;
-            font-size: 0.95rem;
-        }
-
-        /* ===== Подвал ===== */
-        footer {
-            background-color: #0d0d0d;
-            padding: 1.5rem 0;
-            text-align: center;
-            color: #555;
-            font-size: 0.9rem;
-            border-top: 1px solid #222;
-            margin-top: auto;
-        }
-        footer a { color: #777; }
-        footer a:hover { color: #cc0000; }
-
-        /* ===== Адаптив ===== */
-        @media (max-width: 768px) {
-            .hero h1 { font-size: 2.8rem; }
-            .hero .subtitle { font-size: 1.2rem; }
-            .hero .btn { padding: 0.7rem 1.8rem; font-size: 1rem; }
-            .nav-links { gap: 1rem; }
-            .nav-links a { font-size: 0.9rem; }
-        }
-        @media (max-width: 480px) {
-            .hero h1 { font-size: 2.2rem; }
-            .hero .quote { font-size: 1rem; padding: 1rem; }
-            .hero .nav-card { padding: 1.5rem; min-width: 150px; }
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <header>
-        <div class="container">
-            <nav>
-                <div class="logo">☭ <span>Призрак</span> Коммунизма</div>
-                <ul class="nav-links">
-                    <li><a href="index.html" class="active">Главная</a></li>
-                    <li><a href="about.html">Обо мне</a></li>
-                    <li><a href="theory.html">Моя теория</a></li>
-                    <li><a href="social.html">Мои соцсети</a></li>
-                </ul>
-            </nav>
+<header>
+    <div class="container">
+        <nav>
+            <div class="logo">☭ <span>Призрак</span> Коммунизма</div>
+            <ul class="nav-links">
+                <li><a href="index.html" class="active">Главная</a></li>
+                <li><a href="about.html">Обо мне</a></li>
+                <li><a href="theory.html">Теория</a></li>
+                <li><a href="news.html">Новости</a></li>
+                <li><a href="social.html">Контакты</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<main class="hero">
+    <div class="container">
+        <h1>☭ <span>Призрак</span> Коммунизма</h1>
+        <div class="subtitle">Марксистская демократия • Антиавторитарный советский социализм</div>
+
+        <div class="quote">
+            «Призрак бродит по Европе — призрак коммунизма. Все силы старой Европы объединились для священной охоты на этого призрака: папа и царь, Меттерних и Гизо, французские радикалы и немецкие полицейские...»
+            <cite>— Карл Маркс и Фридрих Энгельс, «Манифест Коммунистической партии», 1848</cite>
         </div>
-    </header>
 
-    <main class="hero">
-        <div class="container">
-            <h1>☭ <span>Призрак</span> Коммунизма</h1>
-            <div class="subtitle">Марксистская демократия • Антиавторитарный советский социализм</div>
+        <div style="margin-bottom: 2rem;">
+            <a href="about.html" class="btn">Узнать больше</a>
+            <a href="https://t.me/PrisrakKommunisma" target="_blank" class="btn btn-outline">📱 Telegram</a>
+        </div>
 
-            <div class="quote">
-                «Призрак бродит по Европе — призрак коммунизма. Все силы старой Европы объединились для священной охоты на этого призрака: папа и царь, Меттерних и Гизо, французские радикалы и немецкие полицейские...»
-                <cite>— Карл Маркс и Фридрих Энгельс, «Манифест Коммунистической партии», 1848</cite>
+        <div class="nav-cards">
+            <div class="nav-card">
+                <h3>👤 Обо мне</h3>
+                <p>Кто я, моя позиция, принципы и ориентиры.</p>
+                <a href="about.html">Подробнее →</a>
             </div>
-
-            <p class="description">
-                Аналитический проект. Без иллюзий. Только классовый анализ, критика всех авторитарных и ревизионистских течений, защита марксистской демократии и антиавторитарного советского социализма.
-            </p>
-
-            <div style="margin-bottom: 2rem;">
-                <a href="about.html" class="btn">Узнать больше</a>
-                <a href="https://t.me/PrisrakKommunisma" target="_blank" class="btn btn-outline">📱 Telegram</a>
+            <div class="nav-card">
+                <h3>📖 Теория</h3>
+                <p>Марксистская демократия и антиавторитарный социализм — развёрнуто.</p>
+                <a href="theory.html">Подробнее →</a>
             </div>
-
-            <div class="nav-cards">
-                <div class="nav-card">
-                    <h3>👤 Обо мне</h3>
-                    <p>Кто такой Ухватов, моя позиция, принципы и ориентиры.</p>
-                    <a href="about.html">Подробнее →</a>
-                </div>
-                <div class="nav-card">
-                    <h3>📖 Моя теория</h3>
-                    <p>Марксистская демократия и антиавторитарный советский социализм — развёрнуто.</p>
-                    <a href="theory.html">Подробнее →</a>
-                </div>
-                <div class="nav-card">
-                    <h3>📱 Мои соцсети</h3>
-                    <p>Telegram, YouTube, Teletype — подписывайся, читай, распространяй.</p>
-                    <a href="social.html">Подробнее →</a>
-                </div>
+            <div class="nav-card">
+                <h3>📰 Новости</h3>
+                <p>События, факты, сводки — взгляд пролетариата.</p>
+                <a href="news.html">Подробнее →</a>
+            </div>
+            <div class="nav-card">
+                <h3>📱 Контакты</h3>
+                <p>Telegram, YouTube, Teletype — подписывайся.</p>
+                <a href="social.html">Подробнее →</a>
             </div>
         </div>
-    </main>
+    </div>
+</main>
 
-    <footer>
-        <div class="container">
-            <p>☭ <a href="index.html">Призрак Коммунизма</a> © 2026. Призрак бродит по Европе.</p>
-            <p style="margin-top: 0.3rem; font-size: 0.8rem; color: #444;">Сайт сделан в шутку, но идеи — серьёзные.</p>
-        </div>
-    </footer>
+<footer>
+    <div class="container">
+        <p>☭ <a href="index.html">Призрак Коммунизма</a> © 2026. Призрак бродит по Европе.</p>
+    </div>
+</footer>
 
 </body>
 </html>
